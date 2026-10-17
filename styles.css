@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(
+        180deg,
+        #fff6fa,
+        #ffe4ef,
+        #ffd6ea
+    );
+    color:#6b4961;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    color:#ff6fae;
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    color:#b66d8f;
+}
+
+nav{
+    background:#ffcde1;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#8c4d6f;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff6fae;
+}
+
+.hero{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-content{
+    background:rgba(255,255,255,.7);
+    backdrop-filter: blur(12px);
+    padding:40px;
+    border-radius:30px;
+    max-width:600px;
+    box-shadow:0 10px 30px rgba(255,111,174,.15);
+}
+
+.hero h2{
+    color:#ff5fa2;
+    font-size:2.5rem;
+}
+
+.hero p{
+    margin:20px 0;
+}
+
+button{
+    background:#ff8cbc;
+    color:white;
+    border:none;
+    padding:14px 26px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff5fa2;
+    transform:translateY(-2px);
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:60px 20px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(255,182,208,.4);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#ff5fa2;
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#ffcde1;
+    color:#8c4d6f;
+}
+
+.floating-heart{
+    position:fixed;
+    font-size:25px;
+    animation:floatUp 4s linear forwards;
+    pointer-events:none;
+    z-index:999;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-250px);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h2{
+        font-size:2rem;
+    }
+}
